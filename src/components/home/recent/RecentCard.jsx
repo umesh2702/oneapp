@@ -7,7 +7,7 @@ const RecentCard = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get("http://localhost:9999/api/c3/ser/allservice");
+        const response = await axios.get("https://california-server.onrender.com/api/c3/ser/allservice");
         setServices(response.data.services);
       } catch (error) {
         console.error("Error fetching services:", error);

@@ -15,7 +15,7 @@ const Hero = () => {
               <input type='text' placeholder='Location' />
             </div>
             <div className='box'>
-              <span>Service Type</span>
+              <span>Property Type</span>
               <input type='text' placeholder='Property Type' />
             </div>
             <div className='box'>

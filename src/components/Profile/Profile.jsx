@@ -19,7 +19,7 @@ const Profile = ({login}) => {
           throw new Error('JWT token not found in localStorage');
         }
 
-        const response = await axios.get('http://localhost:9999/api/c3/user/me', {
+        const response = await axios.get('https://california-server.onrender.com/api/c3/user/me', {
           headers: {
             Authorization: `Bearer ${jwtToken}`
           }

@@ -9,6 +9,7 @@ import Contact from "../contact/Contact";
 import Login from '../common/LoginSignup/Login';
 import Signup from "../common/LoginSignup/Signup";
 import Profile from "../Profile/Profile";
+import Chat from "../Chat";
 
 const Pages = () => {
   const [login, setLogin] = useState(false);
@@ -29,6 +30,7 @@ const Pages = () => {
           <Route exact path='/blog' component={Blog} />
           <Route exact path='/pricing' component={Pricing} />
           <Route exact path='/contact' component={Contact} />
+          <Route path='/chat' component={Chat}/>
         </Switch>
       </Router>
     </>

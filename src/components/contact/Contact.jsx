@@ -2,10 +2,13 @@ import React from "react"
 import img from "../images/pricing.jpg"
 import Back from "../common/Back"
 import "./contact.css"
+import Header from "../common/header/Header"
+import Footer from "../common/footer/Footer"
 
 const Contact = () => {
   return (
     <>
+    <Header/>
       <section className='contact mb'>
         <Back name='Contact Us' title='Get Helps & Friendly Support' cover={img} />
         <div className='container'>
@@ -21,6 +24,7 @@ const Contact = () => {
           </form>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

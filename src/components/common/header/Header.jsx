@@ -1,18 +1,19 @@
 import React, { useState } from "react"
 import "./header.css"
 import { nav } from "../../data/Data"
-import { Link } from "react-router-dom"
-
-const Header = () => {
+import { Link } from "react-router-dom/cjs/react-router-dom"
+import logo from '../../images/logo.png'
+const Header = ({login}) => {
   const [navList, setNavList] = useState(false)
 
   return (
     <>
       <header>
         <div className='container flex'>
-          <div className='logo'>
-            <img src='./images/logo.png' alt='' />
+       <Link to='/'>   <div className='logo'>
+            <img src={logo} alt='' />
           </div>
+          </Link>
           <div className='nav'>
             <ul className={navList ? "small" : "flex"}>
               {nav.map((list, index) => (
@@ -26,9 +27,12 @@ const Header = () => {
             <h4>
               <span>2</span> My List
             </h4>
-            <button className='btn1'>
+            {login?  <Link to='/profile'><button className='btn1'>
+              <i className='fa fa-sign-out'></i> Profile
+            </button></Link> :   <button className='btn1' onClick={() => window.location.href = '/login'}>
               <i className='fa fa-sign-out'></i> Sign In
-            </button>
+            </button> }
+         
           </div>
 
           <div className='toggle'>
